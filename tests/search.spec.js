@@ -8,10 +8,10 @@ sinonStubPromise(sinon);
 
 global.fetch = require('node-fetch');
 
-import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from '../src/main';
+import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from '../src/search';
 
 
-describe('Spotify Wrapper', () => {
+describe('Search', () => {
 	let fetchedStub;
 	let promise;
 
@@ -32,6 +32,7 @@ describe('Spotify Wrapper', () => {
 		it('should exist the searchAlbums method', () => {
 			expect(searchAlbums).to.exist;
 		})
+
 
 		it('should exist the searchArtists method', () => {
 			expect(searchArtists).to.exist;
@@ -79,7 +80,7 @@ describe('Spotify Wrapper', () => {
 			const artists = search('Incubus', 'artist')
 
 			expect(artists.resolveValue).to.be.eql({ body: 'json' });
-		})	
+		})
 	})
 
 	describe('searchArtist', () => {
@@ -95,7 +96,7 @@ describe('Spotify Wrapper', () => {
 				.calledWith('https://api.spotify.com/v1/search?q=Incubus&type=artist')
 
 			const artists2 = searchArtists('Muse');
-			
+
 			expect(fetchedStub).to.have.been
 				.calledWith('https://api.spotify.com/v1/search?q=Muse&type=artist')
 		});
@@ -114,7 +115,7 @@ describe('Spotify Wrapper', () => {
 				.calledWith('https://api.spotify.com/v1/search?q=Incubus&type=album')
 
 			const artists2 = searchAlbums('Muse');
-			
+
 			expect(fetchedStub).to.have.been
 				.calledWith('https://api.spotify.com/v1/search?q=Muse&type=album')
 		});
@@ -133,7 +134,7 @@ describe('Spotify Wrapper', () => {
 				.calledWith('https://api.spotify.com/v1/search?q=Incubus&type=track')
 
 			const artists2 = searchTracks('Muse');
-			
+
 			expect(fetchedStub).to.have.been
 				.calledWith('https://api.spotify.com/v1/search?q=Muse&type=track')
 		});
@@ -152,7 +153,7 @@ describe('Spotify Wrapper', () => {
 				.calledWith('https://api.spotify.com/v1/search?q=Incubus&type=playlist')
 
 			const artists2 = searchPlaylists('Muse');
-			
+
 			expect(fetchedStub).to.have.been
 				.calledWith('https://api.spotify.com/v1/search?q=Muse&type=playlist')
 		});
