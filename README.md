@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/paulinhoerry/spotify-wrapper.svg?branch=master)](https://travis-ci.org/paulinhoerry/spotify-wrapper)
 
+[![Coverage Status](https://coveralls.io/repos/github/paulinhoerry/spotify-wrapper/badge.svg?branch=master)](https://coveralls.io/github/paulinhoerry/spotify-wrapper?branch=master)
+
 A wrapper to work with the [Spotify web API](https://beta.developer.spotify.com/)
 
 ## Getting Started
