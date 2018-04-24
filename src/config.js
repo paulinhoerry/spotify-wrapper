@@ -2,8 +2,8 @@ const TOKEN_API = 'BQAdwbvGX7tHWzS9Dy8SKZeW80u1uwSxxFDN3tU2x2uf2RAjWvcyb4QyGVV3x
 
 export const HEADERS = {
   headers: {
-    Authorization: `'Bearer ${TOKEN_API}'`
-  }
+    Authorization: `'Bearer ${TOKEN_API}'`,
+  },
 };
 
-export const API_URL = 'https://api.spotify.com/v1'
+export const API_URL = 'https://api.spotify.com/v1';
